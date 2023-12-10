@@ -1,0 +1,14 @@
+{
+    "electrum1.netseed.net": {
+        "pruning": "-",
+        "s": "50002",
+        "t": "50001",
+        "version": "1.4.2"
+    },
+    "electrum2.netseed.net": {
+        "pruning": "-",
+        "s": "50002",
+        "t": "50001",
+        "version": "1.4.2"
+    }
+}

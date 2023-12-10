@@ -26,7 +26,7 @@ with open('contrib/requirements/requirements-hw.txt') as f:
     requirements_hw = f.read().splitlines()
 
 # load version.py; needlessly complicated alternative to "imp.load_source":
-version_spec = importlib.util.spec_from_file_location('version', 'electrum_ltc/version.py')
+version_spec = importlib.util.spec_from_file_location('version', 'electrum_glc/version.py')
 version_module = version = importlib.util.module_from_spec(version_spec)
 version_spec.loader.exec_module(version_module)
 
@@ -36,8 +36,8 @@ if platform.system() in ['Linux', 'FreeBSD', 'DragonFly']:
     # note: we can't use absolute paths here. see #7787
     data_files += [
         (os.path.join('share', 'applications'),               ['electrum-ltc.desktop']),
-        (os.path.join('share', 'pixmaps'),                    ['electrum_ltc/gui/icons/electrum-ltc.png']),
-        (os.path.join('share', 'icons/hicolor/128x128/apps'), ['electrum_ltc/gui/icons/electrum-ltc.png']),
+        (os.path.join('share', 'pixmaps'),                    ['electrum_glc/gui/icons/electrum-ltc.png']),
+        (os.path.join('share', 'icons/hicolor/128x128/apps'), ['electrum_glc/gui/icons/electrum-ltc.png']),
     ]
 
 extras_require = {
@@ -60,17 +60,17 @@ setup(
     python_requires='>={}'.format(MIN_PYTHON_VERSION),
     install_requires=requirements,
     extras_require=extras_require,
-    packages=(['electrum_ltc',]
-              + [('electrum_ltc.'+pkg) for pkg in
-                 find_packages('electrum_ltc', exclude=["tests", "gui.kivy", "gui.kivy.*"])]),
+    packages=(['electrum_glc',]
+              + [('electrum_glc.'+pkg) for pkg in
+                 find_packages('electrum_glc', exclude=["tests", "gui.kivy", "gui.kivy.*"])]),
     package_dir={
-        'electrum_ltc': 'electrum_ltc'
+        'electrum_glc': 'electrum_glc'
     },
     # Note: MANIFEST.in lists what gets included in the tar.gz, and the
     # package_data kwarg lists what gets put in site-packages when pip installing the tar.gz.
     # By specifying include_package_data=True, MANIFEST.in becomes responsible for both.
     include_package_data=True,
-    scripts=['electrum_ltc/electrum-ltc'],
+    scripts=['electrum_glc/electrum-ltc'],
     data_files=data_files,
     description="Lightweight Litecoin Wallet",
     author="Thomas Voegtlin",

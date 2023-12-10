@@ -137,7 +137,7 @@ info "preparing electrum-ltc-locale."
     cd "$PROJECT_ROOT"
     git submodule update --init
 
-    LOCALE="$PROJECT_ROOT/electrum_ltc/locale/"
+    LOCALE="$PROJECT_ROOT/electrum_glc/locale/"
     # we want the binary to have only compiled (.mo) locale files; not source (.po) files
     rm -rf "$LOCALE"
     "$CONTRIB/build_locale.sh" "$CONTRIB/deterministic-build/electrum-ltc-locale/locale/" "$LOCALE"
@@ -179,7 +179,7 @@ cp "/usr/lib/x86_64-linux-gnu/libzbar.so.0" "$APPDIR/usr/lib/libzbar.so.0"
 
 info "desktop integration."
 cp "$PROJECT_ROOT/electrum-ltc.desktop" "$APPDIR/electrum-ltc.desktop"
-cp "$PROJECT_ROOT/electrum_ltc/gui/icons/electrum-ltc.png" "$APPDIR/electrum-ltc.png"
+cp "$PROJECT_ROOT/electrum_glc/gui/icons/electrum-ltc.png" "$APPDIR/electrum-ltc.png"
 
 
 # add launcher

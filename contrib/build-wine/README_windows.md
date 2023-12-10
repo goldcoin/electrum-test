@@ -23,7 +23,7 @@ Run install (this should install most dependencies):
 
 [libsecp256k1](https://github.com/bitcoin-core/secp256k1) is a required dependency.
 This is a C library, which you need to compile yourself.
-Electrum needs a dll, named `libsecp256k1-0.dll`, placed into the inner `electrum_ltc/` folder.
+Electrum needs a dll, named `libsecp256k1-0.dll`, placed into the inner `electrum_glc/` folder.
 
 For Unix-like systems, the (`contrib/make_libsecp256k1.sh`) script does this for you,
 however it does not work on Windows.

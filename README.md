@@ -116,12 +116,12 @@ $ ./run_electrum
 
 Run unit tests with `pytest`:
 ```
-$ pytest electrum_ltc/tests -v
+$ pytest electrum_glc/tests -v
 ```
 
 To run a single file, specify it directly like this:
 ```
-$ pytest electrum_ltc/tests/test_bitcoin.py -v
+$ pytest electrum_glc/tests/test_bitcoin.py -v
 ```
 
 ## Creating Binaries
