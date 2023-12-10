@@ -10,14 +10,14 @@ include contrib/requirements/requirements*.txt
 include contrib/deterministic-build/requirements*.txt
 include contrib/*.sh
 
-graft electrum_ltc
-prune electrum_ltc/tests
+graft electrum_glc
+prune electrum_glc/tests
 graft contrib/udev
 
-exclude electrum_ltc/*.so
-exclude electrum_ltc/*.so.0
-exclude electrum_ltc/*.dll
-exclude electrum_ltc/*.dylib
+exclude electrum_glc/*.so
+exclude electrum_glc/*.so.0
+exclude electrum_glc/*.dll
+exclude electrum_glc/*.dylib
 
 global-exclude __pycache__
 global-exclude *.py[co~]

@@ -61,7 +61,7 @@ You probably need to clear the cache: `rm -rf .buildozer/android/platform/build-
 Assuming `adb` is installed:
 ```
 $ adb -d install -r dist/Electrum-LTC-*-arm64-v8a-debug.apk
-$ adb shell monkey -p org.electrum_ltc.electrum_ltc 1
+$ adb shell monkey -p org.electrum_glc.electrum_glc 1
 ```
 
 
@@ -86,7 +86,7 @@ adb logcat | grep python
 ```
 Better `grep` but fragile because of `cut`:
 ```
-adb logcat | grep -F "`adb shell ps | grep org.electrum_ltc.electrum_ltc | cut -c14-19`"
+adb logcat | grep -F "`adb shell ps | grep org.electrum_glc.electrum_glc | cut -c14-19`"
 ```
 
 
@@ -113,8 +113,8 @@ of Android does not let you access the internal storage of an app without root.
 (See [this](https://stackoverflow.com/q/9017073))
 ```
 $ adb shell
-$ run-as org.electrum_ltc.electrum_ltc ls /data/data/org.electrum_ltc.electrum_ltc/files/data
-$ run-as org.electrum_ltc.electrum_ltc cp /data/data/org.electrum_ltc.electrum_ltc/files/data/wallets/my_wallet /sdcard/some_path/my_wallet
+$ run-as org.electrum_glc.electrum_glc ls /data/data/org.electrum_glc.electrum_glc/files/data
+$ run-as org.electrum_glc.electrum_glc cp /data/data/org.electrum_glc.electrum_glc/files/data/wallets/my_wallet /sdcard/some_path/my_wallet
 ```
 
 Or use Android Studio: "Device File Explorer", which can download/upload data directly from device (via adb).

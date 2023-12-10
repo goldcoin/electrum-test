@@ -18,7 +18,7 @@ info "Last commit: $VERSION"
 # Load electrum-locale for this release
 git submodule update --init
 
-LOCALE="$WINEPREFIX/drive_c/electrum-ltc/electrum_ltc/locale/"
+LOCALE="$WINEPREFIX/drive_c/electrum-ltc/electrum_glc/locale/"
 # we want the binary to have only compiled (.mo) locale files; not source (.po) files
 rm -rf "$LOCALE"
 "$CONTRIB/build_locale.sh" "$CONTRIB/deterministic-build/electrum-ltc-locale/locale/" "$LOCALE"

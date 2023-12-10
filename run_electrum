@@ -90,25 +90,25 @@ if not is_android:
 
 sys._ELECTRUM_RUNNING_VIA_RUNELECTRUM = True  # used by logging.py
 
-from electrum_ltc.logging import get_logger, configure_logging  # import logging submodule first
-from electrum_ltc import util
-from electrum_ltc import constants
-from electrum_ltc import SimpleConfig
-from electrum_ltc.wallet_db import WalletDB
-from electrum_ltc.wallet import Wallet
-from electrum_ltc.storage import WalletStorage
-from electrum_ltc.util import print_msg, print_stderr, json_encode, json_decode, UserCancelled
-from electrum_ltc.util import InvalidPassword
-from electrum_ltc.commands import get_parser, known_commands, Commands, config_variables
-from electrum_ltc import daemon
-from electrum_ltc import keystore
-from electrum_ltc.util import create_and_start_event_loop
-from electrum_ltc.i18n import set_language
+from electrum_glc.logging import get_logger, configure_logging  # import logging submodule first
+from electrum_glc import util
+from electrum_glc import constants
+from electrum_glc import SimpleConfig
+from electrum_glc.wallet_db import WalletDB
+from electrum_glc.wallet import Wallet
+from electrum_glc.storage import WalletStorage
+from electrum_glc.util import print_msg, print_stderr, json_encode, json_decode, UserCancelled
+from electrum_glc.util import InvalidPassword
+from electrum_glc.commands import get_parser, known_commands, Commands, config_variables
+from electrum_glc import daemon
+from electrum_glc import keystore
+from electrum_glc.util import create_and_start_event_loop
+from electrum_glc.i18n import set_language
 
 if TYPE_CHECKING:
     import threading
 
-    from electrum_ltc.plugin import Plugins
+    from electrum_glc.plugin import Plugins
 
 _logger = get_logger(__name__)
 
@@ -265,7 +265,7 @@ async def run_offline_command(config, config_options, plugins: 'Plugins'):
 
 
 def init_plugins(config, gui_name):
-    from electrum_ltc.plugin import Plugins
+    from electrum_glc.plugin import Plugins
     return Plugins(config, gui_name)
 
 
@@ -330,7 +330,7 @@ def main():
             'gui': android_gui,
             'single_password': True,
         }
-        if util.get_android_package_name() == "org.electrum_ltc.testnet.electrum_ltc":
+        if util.get_android_package_name() == "org.electrum_glc.testnet.electrum_glc":
             # ~hack for easier testnet builds. pkgname subject to change.
             config_options['testnet'] = True
     else:
