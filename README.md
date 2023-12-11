@@ -1,4 +1,4 @@
-# Electrum-GLC - Lightweight Goldcoin Client
+# Electrum-GLC - Lightweight Goldcoin client
 
 ```
 Licence: MIT Licence
