@@ -1,0 +1,17 @@
+# If you want Electrum to appear in a Linux app launcher ("start menu"), install this by doing:
+# sudo desktop-file-install electrum-glc.desktop
+
+[Desktop Entry]
+Comment=Lightweight Goldcoin Client
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\"; electrum-glc %u"
+GenericName[en_US]=Goldcoin Wallet
+GenericName=Goldcoin Wallet
+Icon=electrum-glc
+Name[en_US]=Electrum Goldcoin Wallet
+Name=Electrum Goldcoin Wallet
+Categories=Finance;Network;
+StartupNotify=true
+StartupWMClass=electrum-glc
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/goldcoin;

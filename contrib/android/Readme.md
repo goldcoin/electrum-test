@@ -60,7 +60,7 @@ You probably need to clear the cache: `rm -rf .buildozer/android/platform/build-
 ### How do I deploy on connected phone for quick testing?
 Assuming `adb` is installed:
 ```
-$ adb -d install -r dist/Electrum-LTC-*-arm64-v8a-debug.apk
+$ adb -d install -r dist/Electrum-GLC-*-arm64-v8a-debug.apk
 $ adb shell monkey -p org.electrum_glc.electrum_glc 1
 ```
 
@@ -95,7 +95,7 @@ Install Kivy.
 
 Build atlas: `(cd contrib/android/; make theming)`
 
-Run electrum with the `-g` switch: `electrum-ltc -g kivy`
+Run electrum with the `-g` switch: `electrum-glc -g kivy`
 
 ### debug vs release build
 If you just follow the instructions above, you will build the apk
